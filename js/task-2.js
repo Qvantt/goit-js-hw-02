@@ -2,8 +2,11 @@ function makeArray(firstArray, secondArray, maxLength) {
   let ziroArray = [].concat(firstArray, secondArray);
   if (ziroArray.length >= maxLength) {
     return ziroArray.slice(0, maxLength);
+  } else {
+    return ziroArray;
   }
 }
+
 console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3)); // ["Mango", "Poly", "Ajax"]
 console.log(makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
 console.log(makeArray(['Mango'], ['Ajax', 'Chelsea', 'Poly', 'Houston'], 3)); // ["Mango", "Ajax", "Chelsea"]
